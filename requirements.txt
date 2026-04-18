@@ -1,0 +1,47 @@
+# ============================================
+# CSW-YOLO: Fire Detection with YOLO11
+# Python version: 3.11.14
+# CUDA version:   12.8
+# ============================================
+
+# Note on installation order:
+#   1. Install PyTorch separately (GPU-specific):
+#      pip install torch==2.10.0 torchvision --index-url https://download.pytorch.org/whl/cu128
+#   2. Install Ultralytics from local source (editable):
+#      cd ultralytics && pip install -e . && cd ..
+#   3. Then install the packages below:
+#      pip install -r requirements.txt
+
+# ----- Core scientific stack -----
+numpy>=1.26.0,<2.0.0
+scipy>=1.11.0
+pandas>=2.1.0
+
+# ----- Deep learning utilities -----
+# PyTorch is installed separately; listed here for reference
+# torch>=2.10.0
+# torchvision>=0.20.0
+
+# ----- Computer vision -----
+opencv-python>=4.8.0
+pillow>=10.0.0
+
+# ----- YOLO / object detection -----
+# Ultralytics is installed in editable mode from ./ultralytics
+# See installation instructions above
+
+# ----- Visualization and metrics -----
+matplotlib>=3.7.0
+seaborn>=0.13.0
+tqdm>=4.65.0
+
+# ----- Configuration and data handling -----
+pyyaml>=6.0
+requests>=2.31.0
+
+# ----- Experiment tracking (optional but useful) -----
+tensorboard>=2.15.0
+
+# ----- Development tools (optional) -----
+# jupyter>=1.0.0
+# ipykernel>=6.28.0

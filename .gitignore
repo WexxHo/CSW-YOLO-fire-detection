@@ -205,3 +205,48 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# ============================================
+# CSW-YOLO project-specific ignores
+# ============================================
+
+# Datasets (must be stored outside the repo)
+datasets/
+**/D-Fire/
+**/FLAME/
+*.zip
+*.tar
+*.tar.gz
+
+# Model weights (use GitHub Releases for these)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+*.pb
+
+# But explicitly DO track YAML configs, even tiny ones
+!configs/*.yaml
+!ultralytics/ultralytics/cfg/**/*.yaml
+
+# Training outputs
+runs/
+wandb/
+lightning_logs/
+mlruns/
+
+# Test artifacts (smoke test downloads)
+scripts/bus.jpg
+scripts/*.jpg
+scripts/*.png
+
+# Jupyter / IDE
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.iml
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
